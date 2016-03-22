@@ -1,0 +1,471 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Let's start learning WebVR!
+
+
+  body
+
+    article
+
+      //- 1
+      section
+        h3 Let's start learning
+        h1.theme WebVR
+
+      //- 2
+      section
+        h4.left Before Ask " What is WebVR ? "
+        br
+        h4.left We should know
+        br
+        h2.theme What is VR ?
+
+      //- 3
+      section(data-bespoke-hash='VR')
+        h2.theme Virtual Reality 虛擬實境
+        br
+        ul.point-list
+          li 是利用電腦模擬產生一個三度空間的虛擬世界
+          li 提供使用者關於視覺、聽覺、觸覺等感官的模擬
+          li 讓使用者如同身歷其境一般
+          br
+          br
+          li
+            h6 plus:
+              a(target="_blank" href="http://www.inside.com.tw/2015/10/08/what_are_vr_mr_ar") 一次搞懂虛擬實境VR、混合實境MR、擴增實境AR
+
+      //- 4
+      section
+        h2.theme VR - 虛擬互動遊戲
+        br
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/cML814JD09g" frameborder="0" allowfullscreen></iframe>
+        br
+        h6 ref:
+          a(target="_blank" href="http://inplus.tw/archives/1170")【THE VOID】比3D還真實的4D遊戲，真實感打趴所有次世代遊戲機！
+
+      //- 5
+      section
+        h2.theme VR Viewer
+        br
+        div
+          img(class="image" src="http://www.inside.com.tw/wp-content/uploads/2015/12/vrf003.jpg")
+        br
+        h6 ref:
+          a(target="_blank" href="http://www.samsung.com/tw/discover/mobile/gear-vr-blogger-ahuiliao/") 現在就走入 VR虛擬實境！Gear VR台灣上市試玩分享
+        br
+        h6 ref:
+          a(target="_blank" href="http://www.inside.com.tw/2015/12/25/vr-future")「摸得到」的虛擬世界即將來臨？從 VR 進行式一窺未來
+
+      //- 6
+      section
+        h2.theme VR is the Next
+        br
+
+        h3 Facebook、Google、三星、HTC
+        br
+        br
+        br
+        h6.left ref:
+          a(target="_blank" href="http://www.bnext.com.tw/article/view/id/38880") 2016/03/09 : VR/AR將成消費科技第4大平台，新創投資額逐年翻倍
+        br
+        h6.left ref:
+          a(target="_blank" href="http://www.bnext.com.tw/article/view/id/38768") 2016/02/25 : 虛擬實境元年到了？VR在MWC展上超吸睛
+        br
+        h6.left ref:
+          a(target="_blank" href="http://www.bnext.com.tw/topic/view/id/115") 2016/01/13 : VR玩真的！Google正式設立事業部，對決Facebook
+        br
+        h6.left ref:
+          a(target="_blank" href="http://www.bnext.com.tw/article/view/id/36462") 2015/06/10 : 虛擬實境商機大爆發
+
+      //- 7
+      section
+        h3.left We know what is VR now.
+        br
+        h3.left So...
+        br
+        h2.theme What is WebVR ?
+
+      //- 8
+      section(data-bespoke-hash='WebVR')
+        h1.theme Web + VR
+        h4 Bringing Virtual Reality to the Web
+
+      //- 9
+      section
+        h2.theme WebVR
+        ul.point-list
+          li <span class="theme">Experimental Javascript API</span> that provides access to Virtual Reality devices in your browser
+            div.small such as the Oculus Rift or Google Cardboard
+          li The Editors Draft of the spec is currently hosted at
+             span <a target="_blank" href="https://mozvr.github.io/webvr-spec/"> this </a>
+          li Currently available in <span class="theme">Firefox nightly</span>,or in experimental builds of <span class="theme">Chrome</span>.
+        br
+        h6 ref:
+          a(target="_blank" href="http://webvr.info/") http://webvr.info/
+
+      //- 10
+      section
+        h5 We have <span class="theme">WebVR</span> that can make Virtual Reality run on our browser.
+        br
+        br
+        h4 Then, we still need to prepare <span class="theme">two things</span>.
+
+      //- 11
+      section
+        h3 <strong class="theme">Virtual Reality 3D scene</strong> + Viewer
+        div
+          img(src="http://images.bit-tech.net/news_images/2015/12/mozilla-a-frame/article_img.jpg")
+        br
+        h6 ref:
+          a(target="_blank" href="http://www.bit-tech.net/news/bits/2015/12/18/mozilla-a-frame/1") Mozilla launches A-Frame WebVR framework
+
+      //- 12
+      section
+        h3 Virtual Reality 3D scene + <strong class="theme">Viewer</strong>
+        div
+          img(class="image" src="http://www.inside.com.tw/wp-content/uploads/2016/03/cardn.png")
+        br
+        h6 ref:
+          a(target="_blank" href="https://www.google.com/intl/zh-TW_ALL/get/cardboard/get-cardboard/") Google: get-cardboard
+        br
+        h6 ref:
+          a(target="_blank" href="http://www.inside.com.tw/2016/03/02/google-cardboard-virtual-reality") Google：將以 Cardboard 為核心，持續擴大 VR 生態系！
+
+      //- 13
+      section
+        h3.bold How to make browser render 3D scene?
+
+      //- 14
+      section(data-bespoke-hash='WebGL')
+        h2.theme WebGL
+        br
+        ul.point-list
+          li 是一項利用JavaScript API渲染互動式3D電腦圖形和2D圖形的技術
+          li 可相容任何的網頁瀏覽器，無需加裝外掛程式
+        br
+        h6 ref:
+          a(target="_blank" href="https://zh.wikipedia.org/wiki/WebGL") https://zh.wikipedia.org/wiki/WebGL
+        br
+        h6 ref:
+          a(target="_blank" href="http://caniuse.com/#feat=webgl") http://caniuse.com/#feat=webgl
+
+      //- 15
+      section
+        h2 BUT...
+
+      //- 16
+      section
+        h3.bold WebGL is complex and difficult to start coding
+
+      //- 17
+      section
+        h3 If you want to draw this with WebGL
+        br
+        img(src="http://html5.iii.org.tw/course/webgl/lesson01/RSUnit30.png")
+
+      //- 18
+      section
+        h4 Following code is that how WebGL draw a triangle and a square
+        br
+        pre.code-block.small
+          code.language-html.
+            &lt;head&gt;
+              &lt;title&gt;WebGL Course 1 - original version&lt;/title&gt;
+              &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+
+              &lt;script type="text/javascript" src="../GLjs/glMatrix-0.9.5.min.js"&gt;&lt;/script&gt;
+
+              &lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
+                  precision mediump float;
+
+                  void main(void) {
+                      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+                  }
+              &lt;/script&gt;
+
+              &lt;script id="shader-vs" type="x-shader/x-vertex"&gt;
+                  attribute vec3 aVertexPosition;
+
+                  uniform mat4 uMVMatrix;
+                  uniform mat4 uPMatrix;
+
+                  void main(void) {
+                      gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+                  }
+              &lt;/script&gt;
+            &lt;/head&gt;
+
+            &lt;body onload="webGLStart();"&gt;
+              &lt;canvas id="lesson01-canvas" style="border: none;" width="500" height="500"&gt;&lt;/canvas&gt;
+            &lt;/body&gt;
+        pre.code-block.small
+          code.language-javascript.
+            var gl;
+            function initGL(canvas) {
+                try {
+                    gl = canvas.getContext("experimental-webgl");
+                    gl.viewportWidth = canvas.width;
+                    gl.viewportHeight = canvas.height;
+                } catch (e) {
+                }
+                if (!gl) {
+                    alert("Could not initialise WebGL, sorry :-(");
+                }
+            }
+
+
+            function getShader(gl, id) {
+                var shaderScript = document.getElementById(id);
+                if (!shaderScript) {
+                    return null;
+                }
+
+                var str = "";
+                var k = shaderScript.firstChild;
+                while (k) {
+                    if (k.nodeType == 3) {
+                        str += k.textContent;
+                    }
+                    k = k.nextSibling;
+                }
+
+                var shader;
+                if (shaderScript.type == "x-shader/x-fragment") {
+                    shader = gl.createShader(gl.FRAGMENT_SHADER);
+                } else if (shaderScript.type == "x-shader/x-vertex") {
+                    shader = gl.createShader(gl.VERTEX_SHADER);
+                } else {
+                    return null;
+                }
+
+                gl.shaderSource(shader, str);
+                gl.compileShader(shader);
+
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    alert(gl.getShaderInfoLog(shader));
+                    return null;
+                }
+
+                return shader;
+            }
+
+
+            var shaderProgram;
+
+            function initShaders() {
+                var fragmentShader = getShader(gl, "shader-fs");
+                var vertexShader = getShader(gl, "shader-vs");
+
+                shaderProgram = gl.createProgram();
+                gl.attachShader(shaderProgram, vertexShader);
+                gl.attachShader(shaderProgram, fragmentShader);
+                gl.linkProgram(shaderProgram);
+
+                if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+                    alert("Could not initialise shaders");
+                }
+
+                gl.useProgram(shaderProgram);
+
+                shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+                gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+                shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
+                shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+            }
+
+
+            var mvMatrix = mat4.create();
+            var pMatrix = mat4.create();
+
+            function setMatrixUniforms() {
+                gl.uniformMatrix4fv(shaderProgram.pMatrixUniform, false, pMatrix);
+                gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix);
+            }
+
+
+
+            var triangleVertexPositionBuffer;
+            var squareVertexPositionBuffer;
+
+            function initBuffers() {
+                triangleVertexPositionBuffer = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+                var vertices = [
+                 0.0,  1.0,  0.0,
+                -1.0, -1.0,  0.0,
+                 1.0, -1.0,  0.0
+                ];
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+                triangleVertexPositionBuffer.itemSize = 3;
+                triangleVertexPositionBuffer.numItems = 3;
+
+                squareVertexPositionBuffer = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
+                vertices = [
+                 1.0,  1.0,  0.0,
+                -1.0,  1.0,  0.0,
+                 1.0, -1.0,  0.0,
+                -1.0, -1.0,  0.0
+                ];
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+                squareVertexPositionBuffer.itemSize = 3;
+                squareVertexPositionBuffer.numItems = 4;
+            }
+
+
+            function drawScene() {
+                gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
+                gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+                mat4.perspective(45, gl.viewportWidth / gl.viewportHeight, 0.1, 100.0, pMatrix);
+
+                mat4.identity(mvMatrix);
+
+                mat4.translate(mvMatrix, [-1.5, 0.0, -7.0]);
+                gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+                gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+                setMatrixUniforms();
+                gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
+
+
+                mat4.translate(mvMatrix, [3.0, 0.0, 0.0]);
+                gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
+                gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+                setMatrixUniforms();
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
+            }
+
+
+
+            function webGLStart() {
+                var canvas = document.getElementById("lesson01-canvas");
+                initGL(canvas);
+                initShaders();
+                initBuffers();
+
+                gl.clearColor(0.0, 0.0, 0.0, 1.0);
+                gl.enable(gl.DEPTH_TEST);
+
+                drawScene();
+            }
+        br
+        h6 ref:
+          a(target="_blank" href="http://html5.iii.org.tw/course/webgl/lesson01_a-triangle-and-a-square.html") Lesson 1：三角形和矩形
+
+      //- 19
+      section
+        h1.bold OMG!
+        br
+        h3 Is there any way to make those code easier?
+
+      //- 20
+      section
+        h3.bold There are some libraries wrapped WebGL
+        ul.point-list
+          li
+            a(target="_blank" href="https://github.com/mrdoob/three.js") three.js &#9733;&#9733;&#9733;
+            ul.sub-list
+              li a lightweight 3D library with a low level of complexity which provides &lt;canvas&gt;, &lt;svg&gt;, CSS3D and WebGL renderers
+          li
+            a(target="_blank" href="https://github.com/BabylonJS/Babylon.js") Babylon.js &#9733;&#9733;
+            ul.sub-list
+              li a complete JavaScript framework for building 3D games with HTML 5 and WebGL
+          li
+            a(target="_blank" href="https://github.com/playcanvas/engine") PlayCanvas / engine &#9733;
+            ul.sub-list
+              li 3D WebGL game engine with online toolset
+        br
+        h6.right.small The number of &#9733; is represent for which gets more stars on github
+
+      //- 21
+      section
+        h4.left It will be easier by using these libraries
+        br
+        br
+        h3.bold.left But we still need to
+        h3.bold.left render different view for left-eye and right-eye
+        h3.bold.right by ourselves
+
+      //- 22
+      section
+        h3 Luckily
+        br
+        h1.theme <strong>A-frame</strong>
+        h3 solves the problem
+        h3 &
+        h3 Let us easy to start using
+
+      //- 23
+      section(data-bespoke-hash='A-frame')
+        h2.theme A-frame
+        br
+        ul.point-list
+          li Use markup to create VR experiences
+          li Work across desktop, iOS, Android, and the Oculus Rifts
+        br
+        h6 ref:
+          a(target="_blank" href="http://www.inside.com.tw/2015/12/21/a-frame-vr-web-code-mozilla") 開源框架 A-Frame：只要增加一行程式碼就可以製作 VR 網頁
+        br
+        h6 ref:
+          a(href="https://aframe.io") A-frame 官方網站
+
+      //- 24
+      section
+        h4 Following code is that how A-frame draw a cube within VR scene
+        br
+        pre.code-block.small
+          code.language-html.
+            &lt;!doctype html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;My first VR site&lt;/title&gt;
+                &lt;script src="https://aframe.io/releases/latest/aframe.min.js"&gt;&lt;/script&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;!-- we can use A-frame easily just like using html tags --&gt;
+                &lt;a-scene&gt;
+                  &lt;a-cube&gt;&lt;/a-cube&gt;
+                &lt;/a-scene&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+        br
+        h6 ref:
+          a(target="_blank" href="https://aframe.io/docs/guide/") https://aframe.io/docs/guide/
+
+      //- 25
+      section
+        h4 Following examples are come from A-frame
+        br
+        iframe(width="640" height="480" frameborder="0" src="https://aframe.io/examples/showcase/helloworld/")
+
+      //- 26
+      section
+        h3.bold Other Resources About A-frame
+        ul.point-list
+          li
+            a(target="_blank" href="https://github.com/aframevr/awesome-aframe") awesome-aframe
+            div It's a collection of awesome things regarding A-Frame ecosystem
+        ul.point-list
+          li Use React with A-Frame
+            div.small sources from awesome-aframe
+          li
+            a(target="_blank" href="https://github.com/ngokevin/aframe-react") aframe-react
+          li
+            a(target="_blank" href="https://github.com/ngokevin/aframe-react-boilerplate") aframe-react-boilerplate
+
+      //- 27
+      section(data-bespoke-hash='end')
+        h3.bold So,
+        br
+        h2.theme Let's WebVR
+        br
+        br
+        h4.right Thank you :)
+
+    script(src='build/build.js')
